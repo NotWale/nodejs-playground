@@ -110,7 +110,7 @@ const App = () => {
         <Fade in={openModal}>
           <Box sx={style}>
             <Typography id="transition-modal-title" variant="h6" component="h2">
-              Register
+              Register / Login
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
               {`${modalText}`}
@@ -133,6 +133,8 @@ const App = () => {
                 id="standard-basic"
                 label="Username"
                 variant="standard"
+                required="true"
+                inputProps={{ minLength: 3 }}
                 value={regData.name}
                 onChange={(e) =>
                   setRegData({ ...regData, name: e.target.value })
@@ -142,6 +144,8 @@ const App = () => {
                 id="standard-password-input"
                 label="Password"
                 type="password"
+                required="true"
+                inputProps={{ minLength: 3 }}
                 autoComplete="current-password"
                 variant="standard"
                 value={regData.pass}
