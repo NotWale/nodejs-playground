@@ -4,7 +4,7 @@ The Register functionality is a little bit unresponsive atm but it should work.
 Playground to try out NodeJS stuff
 Currently implemented: Login,Register,Creating posts,Deleting posts,Displaying posts
 
-Live Version available later here: [On Netlify](https://amazing-scone-57106f.netlify.app/)
+Live Version available (if the heroku server is running) here: [On Netlify](https://amazing-scone-57106f.netlify.app/)
 
 Run 'yarn' first to install all the necessarry dependencies.
 
