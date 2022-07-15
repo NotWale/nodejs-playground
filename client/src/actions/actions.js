@@ -31,6 +31,17 @@ export const deletePost = (id) => async (dispatch) => {
   }
 };
 
+export const fetchAddress = () => async (dispatch) => {
+  try {
+    const { data } = await api.showAddress();
+
+    dispatch({ type: "FETCH_ADD", payload: data });
+    console.log(data);
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
 // export const register = (name, pass) => async (dispatch) => {
 //   try {
 //     const { data } = await api.register(name, pass);

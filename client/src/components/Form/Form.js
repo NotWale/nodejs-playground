@@ -9,6 +9,7 @@ const Form = () => {
     creator: "",
     title: "",
     message: "",
+    price: 0,
     tags: "",
     selectedFile: "",
   });
@@ -50,6 +51,16 @@ const Form = () => {
           value={postData.message}
           onChange={(e) =>
             setPostData({ ...postData, message: e.target.value })
+          }
+        />
+        <TextField
+          name="price"
+          variant="outlined"
+          label="Price"
+          fullWidth
+          value={postData.price}
+          onChange={(e) =>
+            setPostData({ ...postData, price: e.target.value })
           }
         />
         <div style={{ margin: "1rem" }}>

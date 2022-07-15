@@ -1,14 +1,18 @@
-Currently WIP
 The Register functionality is a little bit unresponsive atm but it should work.
 
 Playground to try out NodeJS stuff
-Currently implemented: Login,Register,Creating posts,Deleting posts,Displaying posts
+Currently implemented: Login,Register,Creating posts,Deleting posts,Displaying posts, Monero RPC -> Show connected Wallet address
 
-Live Version available (if the heroku server is running) here: [On Netlify](https://amazing-scone-57106f.netlify.app/)
+The old version (without rpc calls) of this is available live (if the heroku server is running) here: [On Netlify](https://amazing-scone-57106f.netlify.app/)
+The updated code with monero rpc calls can be compiled as stated below:
 
-Run 'yarn' first to install all the necessarry dependencies.
+0. To understand how monero rpc works check out this site: [Monero Wallet RPC Reference](https://monerodocs.org/interacting/monero-wallet-rpc-reference/)
 
-In the server directory, you can run:
+1. Edit the .env file as shown in .env.example for your mongodb server.
+
+2. Run 'yarn' first to install all the necessarry dependencies. Once in the /server directory and once again in the /client one.
+
+3. In the server directory, you can run:
 
 ### `yarn start`
 
@@ -16,7 +20,7 @@ Starts the server on [http://localhost:5000](http://localhost:5000)
 Don't forget to create a .env file with your credentials for a MongoDB server.
 Refer to .env.example for an example.
 
-In the client directory, you can run:
+4. In the client directory, you can run:
 
 ### `yarn start`
 

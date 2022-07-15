@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import moment from "moment";
 import { useDispatch } from "react-redux";
-import { deletePost } from "../../../actions/actions";
+import { deletePost, fetchAddress } from "../../../actions/actions";
 
 const Post = ({ post }) => {
   const dispatch = useDispatch();
@@ -40,6 +40,7 @@ const Post = ({ post }) => {
         <Typography variant="h5" gutterBottom>
           {post.message}
         </Typography>
+        Price: {post.price} XMR
       </CardContent>
       <CardActions>
         <Button
@@ -48,6 +49,13 @@ const Post = ({ post }) => {
           onClick={() => dispatch(deletePost(post._id))}
         >
           ❌
+        </Button>
+        <Button
+          size="medium"
+          color="primary"
+          onClick={() => dispatch(fetchAddress())}
+        >
+          BUY
         </Button>
       </CardActions>
     </Card>

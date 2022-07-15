@@ -6,10 +6,7 @@ const postSchema = mongoose.Schema({
   creator: String,
   tags: [String],
   selectedFile: String,
-  likeCount: {
-    type: Number,
-    default: 0,
-  },
+  price: Number,
   createdAt: {
     type: Date,
     default: new Date(),
